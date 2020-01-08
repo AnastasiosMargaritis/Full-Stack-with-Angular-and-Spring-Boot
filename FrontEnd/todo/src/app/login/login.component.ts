@@ -9,13 +9,22 @@ export class LoginComponent implements OnInit {
 
   username = 'manastomni'
   password = ''
-  
+  errorMessage = "Invalid Login"
+  invalidLogin = false
+
   constructor() { }
 
   ngOnInit() {
   }
 
   handleLogin(){
-    console.log(this.username);
+
+    if(this.username === "" || this.password === "")
+    {
+      this.invalidLogin = true
+    }else
+    {
+      this.invalidLogin = false
+    }
   }
 }
