@@ -1,21 +1,21 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="https://www.uselessweb.com">Welcome</a>
+        <a class="nav-link" href="https://www.uselessweb.com">Welcome</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/welcome/anasmarg">Home</a>
+        <a class="nav-link" *ngIf="authentication.isUserLoggedIn();" routerLink="/welcome/anasmarg">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/todos">ToDo's</a>
+        <a class="nav-link" *ngIf="authentication.isUserLoggedIn();" routerLink="/todos">ToDo's</a>
       </li>
     </ul>
     <ul class="navbar-nav navbar-collapse justify-content-end">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/login">Login</a>
+        <a class="nav-link" *ngIf="!authentication.isUserLoggedIn()" routerLink="/login">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/logout">Logout</a>
+        <a class="nav-link" *ngIf="authentication.isUserLoggedIn();" routerLink="/logout">Logout</a>
       </li>
     </ul>
   </nav>
