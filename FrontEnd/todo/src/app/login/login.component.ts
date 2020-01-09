@@ -9,7 +9,7 @@ import { AuthenticationService } from '../service/authentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  username = 'manastomni'
+  username = ''
   password = ''
   errorMessage = "Invalid Login"
   invalidLogin = false
