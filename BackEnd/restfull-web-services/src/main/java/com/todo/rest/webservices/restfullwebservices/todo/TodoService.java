@@ -35,7 +35,7 @@ public class TodoService {
         return todo;
     }
 
-    private Todos findById(long id) {
+    public Todos findById(long id) {
         for(Todos todo: todos)
         {
             if(todo.getId() == id)
@@ -44,5 +44,20 @@ public class TodoService {
             }
         }
         return null;
+    }
+
+    public Todos save (Todos todo)
+    {
+        if(todo.getId() == -1 || todo.getId() == 0)
+        {
+            todo.setId(++idCounter);
+            todos.add(todo);
+        }else
+        {
+            deleteById(todo.getId());
+            todos.add(todo);
+        }
+
+        return todo;
     }
 }

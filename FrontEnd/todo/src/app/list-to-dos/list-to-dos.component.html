@@ -1,10 +1,9 @@
-<h1>My Todos</h1>
+<H1>My Todos</H1>
 
 <div class="alert alert-success" *ngIf='deleteMessage'>{{deleteMessage}}</div>
 
 <div class="=container">
     <table  class="table">
-        <caption>My Todos</caption>
         <thead>
             <tr>
                 <th>Description</th>
@@ -25,4 +24,8 @@
         </tbody>
 
     </table>
+
+    <div class="row">
+        <button class="btn btn-success" (click)="addTodo()">Add</button>
+    </div>
 </div>

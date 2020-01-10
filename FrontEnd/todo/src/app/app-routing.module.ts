@@ -17,6 +17,7 @@ const routes: Routes = [
   {path: 'logout', component: LogoutComponent, canActivate:[RouteGuardService]},
   {path: 'todos/:id', component: TodoComponent, canActivate:[RouteGuardService]},
   {path: '**', component: ErrorComponent}
+  
 ];
 
 @NgModule({

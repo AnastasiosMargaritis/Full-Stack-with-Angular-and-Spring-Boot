@@ -9,6 +9,8 @@ public class Todos {
     private Date targetDate;
     private boolean isDone;
 
+    public Todos(){}
+
     public Todos(long id, String description, Date targetDate, boolean isDone) {
         this.id = id;
         this.description = description;
